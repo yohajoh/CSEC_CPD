@@ -1,0 +1,6 @@
+s = input()
+count_upper = 0
+count_lower = 0
+for i in s:
+    count_lower += 1 if i.islower() else 0; count_upper += 1 if i.isupper() else 0
+print(s.lower()) if count_lower >= count_upper else print(s.upper())
