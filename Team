@@ -1,0 +1,7 @@
+n = int(input())
+counts = 0
+for i in range(n):
+    lists = list(map(int, input().split(" ")))
+    if lists.count(1) >= 2:
+        counts += 1
+print(counts)
