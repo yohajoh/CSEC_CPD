@@ -1,0 +1,10 @@
+def games():
+    n = int(input())
+    game = [list(map(int, input().split(" "))) for i in range(n)]
+    c = 0
+    for i in game:
+        for j in range(n):
+           if i[0] == game[j][1]:
+               c+=1
+    return c
+print(games())
