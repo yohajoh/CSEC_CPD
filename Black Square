@@ -1,0 +1,7 @@
+def blackSquare():
+    squares, s = list(map(int, input().split(" "))), input()
+    calories = 0
+    for i in s:
+        calories += squares[int(i)-1]
+    return calories
+print(blackSquare())
