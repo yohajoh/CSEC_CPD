@@ -1,0 +1,11 @@
+def stonesOnTheTable():
+    n, s= int(input()), input()
+    left, right, count_Stones = 0, 1, 0
+    while right < n:
+        if s[left] == s[right]:
+            count_Stones += 1
+            left += 1; right += 1
+        else:
+            left += 1; right += 1
+    return count_Stones
+print(stonesOnTheTable())
