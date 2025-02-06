@@ -1,0 +1,13 @@
+def policeRecruits():
+    n = int(input()); police_and_crimes = list(map(int, input().split(" ")))
+    crimes, polices = 0,0
+    for i in range(n):
+        if police_and_crimes[i] > 0:
+            polices += police_and_crimes[i]
+        elif police_and_crimes[i] < 0:
+            crimes += 1
+            if polices != 0:
+                crimes -= 1
+                polices -= 1
+    return crimes
+print(policeRecruits())
