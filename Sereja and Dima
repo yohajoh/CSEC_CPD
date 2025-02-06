@@ -1,0 +1,24 @@
+def serejaAndDima():
+    n = int(input())
+    cards = list(map(int, input().split(" ")))
+    l,r,l_sum,r_sum = 0,len(cards)-1,0,0
+    b = True if cards[0] >= cards[len(cards)-1] else False
+    while l<=r:
+        if b:
+            if cards[l] >= cards[r]:
+                l_sum += cards[l]
+                l += 1
+            else:
+                l_sum += cards[r]
+                r -= 1
+            b = False
+        else:
+            if cards[l] >= cards[r]:
+                r_sum += cards[l]
+                l += 1
+            else:
+                r_sum += cards[r]
+                r -= 1
+            b = True
+    print(l_sum, r_sum) if cards[0] >= cards[len(cards)-1] else print(r_sum, l_sum)
+serejaAndDima()
