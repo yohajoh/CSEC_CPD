@@ -1,0 +1,10 @@
+def magnetGroup():
+    n = int(input())
+    groups, stack = 1, [input()]
+    for i in range(n-1):
+        m = input()
+        if stack[-1] != m:
+            groups += 1
+            stack.append(m)
+    return groups
+print(magnetGroup())
