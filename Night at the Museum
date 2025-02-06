@@ -1,0 +1,8 @@
+def nightAtTheMuseum():
+    cur, s = 'a', input()
+    re_nu_of_rotation = 0
+    for i in s:
+        re_nu_of_rotation += min(abs(ord(cur)-ord(i)),26 - abs(ord(cur)-ord(i)))
+        cur = i
+    return re_nu_of_rotation
+print(nightAtTheMuseum())
