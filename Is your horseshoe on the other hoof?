@@ -1,0 +1,4 @@
+def horseshoes():
+    set1 = set(map(int, input().split(" ")))
+    return 4-len(set1)
+print(horseshoes())
