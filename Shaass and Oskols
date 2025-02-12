@@ -1,0 +1,21 @@
+def shaass_and_Oskols():
+    n = int(input())
+    list1 = list(map(int, input().split()))
+    m = int(input())
+    for i in range(m):
+        cur = list(map(int, input().split()))
+        left_add = cur[1] - 1
+        right_add = list1[cur[0] - 1] - cur[1]
+        if cur[0] == 1 and n > 1:
+            list1[cur[0]] += right_add
+            list1[cur[0] - 1] = 0
+        elif cur[0] == n:
+            list1[cur[0] - 2] += left_add
+            list1[cur[0] - 1] = 0
+        else:
+            list1[cur[0] - 2] += left_add
+            list1[cur[0]] += right_add
+            list1[cur[0] - 1] = 0
+    for j in range(n):
+        print(list1[j])
+shaass_and_Oskols()
