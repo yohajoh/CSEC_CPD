@@ -1,0 +1,11 @@
+s = input().upper()
+t = input().upper()
+position = 0
+instraction = 0
+while position < len(s) and instraction < len(t):
+    if s[position] == t[instraction]:
+        instraction += 1
+        position += 1
+    else:
+        instraction += 1
+print(position + 1)
