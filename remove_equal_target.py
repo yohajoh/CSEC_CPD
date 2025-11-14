@@ -1,10 +1,24 @@
+# class Solution:
+#     def removeElement(self, nums: list[int], val: int) -> int:
+#         l, r = 0, 0
+#         while r<len(nums):
+#             if nums[r] == val:
+#                 nums.pop(r)
+#             else:
+#                 r += 1
+#         print(r, nums)
+# Solution().removeElement([0,1,2,2,3,0,4,2], 2)
+
+
 class Solution:
-    def removeElement(self, nums: list[int], val: int) -> int:
-        l, r = 0, 0
-        while r<len(nums):
-            if nums[r] == val:
-                nums.pop(r)
-            else:
-                r += 1
-        print(r, nums)
-Solution().removeElement([0,1,2,2,3,0,4,2], 2)
+    def reverseString(self, s: list[str]) -> None:
+        """
+        Do not return anything, modify s in-place instead.
+        """
+        l, r = 0, len(s) - 1
+        while l < r:
+            s[l], s[r] = s[r], s[l]
+            l += 1
+            r -= 1
+        print(s)
+Solution().reverseString(["h","e","l","l","o"])
