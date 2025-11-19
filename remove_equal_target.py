@@ -23,34 +23,34 @@
 #         print(s)
 # Solution().reverseString(["h","e","l","l","o"])
 
-# class Solution:
-#     def moveZeroes(self, nums: list[int]) -> None:
-#         """
-#         Do not return anything, modify nums in-place instead.
-#         """
-#         l, r = 0, 1
-#         while r < len(nums):
-#             if nums[r] != 0 and nums[l] == 0:
-#                 nums[l], nums[r] = nums[r], nums[l]
-#             if nums[l] != 0:
-#                 l += 1
-#             r += 1
-#         print(nums)
-# Solution().moveZeroes([1,2])
-
 class Solution:
-    def twoSum(self, numbers: list[int], target: int) -> list[int]:
-        l, r = 0, len(numbers) - 1
-        while l < r:
-            sum = numbers[l]+numbers[r]
-            if sum == target:
-                return [l+1, r+1]
-            elif sum < target:
+    def moveZeroes(self, nums: list[int]) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        l, r = 0, 1
+        while r < len(nums):
+            if nums[r] != 0 and nums[l] == 0:
+                nums[l], nums[r] = nums[r], nums[l]
+            if nums[l] != 0:
                 l += 1
-            else: 
-                r -= 1
-        return []
-print(Solution().twoSum([2,3,4], 6))
+            r += 1
+        print(nums)
+Solution().moveZeroes([1,2])
+
+# class Solution:
+#     def twoSum(self, numbers: list[int], target: int) -> list[int]:
+#         l, r = 0, len(numbers) - 1
+#         while l < r:
+#             sum = numbers[l]+numbers[r]
+#             if sum == target:
+#                 return [l+1, r+1]
+#             elif sum < target:
+#                 l += 1
+#             else: 
+#                 r -= 1
+#         return []
+# print(Solution().twoSum([2,3,4], 6))
 # class Solution:
 #     def maxArea(self, height: list[int]) -> int:
 #         left = 0
