@@ -50,39 +50,39 @@
 #             else: 
 #                 r -= 1
 #         return []
-# print(Solution().twoSum([2,3,4], 6))
-# class Solution:
-#     def maxArea(self, height: list[int]) -> int:
-#         left = 0
-#         right = len(height) - 1
-#         best = 0
-#         while left < right:
-#             h = min(height[left], height[right])
-#             w = right - left
-#             area = h * w
-#             if area > best:
-#                 best = area
-#             if height[left] < height[right]:
-#                 left += 1
-#             else:
-#                 right -= 1
-#         return best              
-# print(Solution().maxArea([1,1]))
-
+print(Solution().twoSum([2,3,4], 6))
 class Solution:
-    def removeDuplicates(self, nums: list[int]) -> int:
-        l, r = 0, 1
-        while r<len(nums):
-            if len(nums) == 1:
-                return 1, nums
-            if nums[l] == nums[r]:
-                nums[r] = '_'
-                r += 1
+    def maxArea(self, height: list[int]) -> int:
+        left = 0
+        right = len(height) - 1
+        best = 0
+        while left < right:
+            h = min(height[left], height[right])
+            w = right - left
+            area = h * w
+            if area > best:
+                best = area
+            if height[left] < height[right]:
+                left += 1
             else:
-                nums[l+1], nums[r] = nums[r], nums[l+1]
-                r += 1
-                l += 1
-        return l + 1
+                right -= 1
+        return best              
+print(Solution().maxArea([1,1]))
+
+# class Solution:
+#     def removeDuplicates(self, nums: list[int]) -> int:
+#         l, r = 0, 1
+#         while r<len(nums):
+#             if len(nums) == 1:
+#                 return 1, nums
+#             if nums[l] == nums[r]:
+#                 nums[r] = '_'
+#                 r += 1
+#             else:
+#                 nums[l+1], nums[r] = nums[r], nums[l+1]
+#                 r += 1
+#                 l += 1
+#         return l + 1
             
         
-print(Solution().removeDuplicates([0,0,1,1,1,2,2,3,3,4]))
+# print(Solution().removeDuplicates([0,0,1,1,1,2,2,3,3,4]))
