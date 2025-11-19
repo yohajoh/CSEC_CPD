@@ -10,33 +10,33 @@
 # Solution().removeElement([0,1,2,2,3,0,4,2], 2)
 
 
-# class Solution:
-#     def reverseString(self, s: list[str]) -> None:
-#         """
-#         Do not return anything, modify s in-place instead.
-#         """
-#         l, r = 0, len(s) - 1
-#         while l < r:
-#             s[l], s[r] = s[r], s[l]
-#             l += 1
-#             r -= 1
-#         print(s)
-# Solution().reverseString(["h","e","l","l","o"])
-
 class Solution:
-    def moveZeroes(self, nums: list[int]) -> None:
+    def reverseString(self, s: list[str]) -> None:
         """
-        Do not return anything, modify nums in-place instead.
+        Do not return anything, modify s in-place instead.
         """
-        l, r = 0, 1
-        while r < len(nums):
-            if nums[r] != 0 and nums[l] == 0:
-                nums[l], nums[r] = nums[r], nums[l]
-            if nums[l] != 0:
-                l += 1
-            r += 1
-        print(nums)
-Solution().moveZeroes([1,2])
+        l, r = 0, len(s) - 1
+        while l < r:
+            s[l], s[r] = s[r], s[l]
+            l += 1
+            r -= 1
+        print(s)
+Solution().reverseString(["h","e","l","l","o"])
+
+# class Solution:
+#     def moveZeroes(self, nums: list[int]) -> None:
+#         """
+#         Do not return anything, modify nums in-place instead.
+#         """
+#         l, r = 0, 1
+#         while r < len(nums):
+#             if nums[r] != 0 and nums[l] == 0:
+#                 nums[l], nums[r] = nums[r], nums[l]
+#             if nums[l] != 0:
+#                 l += 1
+#             r += 1
+#         print(nums)
+# Solution().moveZeroes([1,2])
 
 # class Solution:
 #     def twoSum(self, numbers: list[int], target: int) -> list[int]:
